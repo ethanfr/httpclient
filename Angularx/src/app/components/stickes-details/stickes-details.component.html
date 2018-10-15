@@ -1,0 +1,13 @@
+<div class="col-xs-4" [ngStyle]="{'background-color':  sticker.color}"
+    (mouseenter)="toggleCheck()"
+    (mouseleave)="toggleCheck()">
+  <div class="icon" *ngIf="showCheck" (click)="onChecked()">
+    <i class="material-icons">check</i>
+  </div>
+  <div class="col-xs-12 title">
+    {{ sticker.category }}
+  </div>
+  <div class="col-xs-12 value">
+    {{ sticker.value }}
+  </div>
+</div>

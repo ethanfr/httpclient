@@ -1,0 +1,7 @@
+
+<div style="border:1px solid black;padding:10px;margin:10px;">
+    <h3>parents message to child:{{msg}}</h3>
+    <app-child1 [childmessage]="msg"></app-child1>
+    <h3>message from child 2:{{childmessage}}</h3>
+    <app-child2 (childTwoMessge)='displayMessage($event)'></app-child2>
+  </div>

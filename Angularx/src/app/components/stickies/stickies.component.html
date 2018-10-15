@@ -1,0 +1,14 @@
+<aside>
+        <!-- [stickes-details]="sticker"
+        "  -->
+         
+        <app-stickes-details  class="child" 
+        *ngFor=" let stickyVal of stickies let i = index;"
+        [sticker]="stickyVal"
+        (checked)="onPostitChecked($event, i)"
+         [ngStyle]="{'background-color':stickyVal.color }">
+        
+        </app-stickes-details >
+       
+  
+</aside>
