@@ -11,6 +11,32 @@
 </app-parent>
 
 <app-user-info></app-user-info> 
+
+<app-mypipe></app-mypipe>
+
 <app-gituser></app-gituser>
 <app-gitrepos></app-gitrepos>-->
-<app-mypipe></app-mypipe>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a routerLink="news" class="nav-link">News</a>
+        </li>
+        <li class="nav-item active">
+            <a routerLink="market" class="nav-link">Market</a>
+        </li>
+        <li class="nav-item active">
+            <a routerLink="tools" class="nav-link">Tools</a>
+        </li>
+        <li class="nav-item active">
+            <a routerLink="wykats" class="nav-link">Wykats</a>
+        </li>
+      </ul>
+    </div>  
+  </nav> <br />
+  
+  <div class="container">
+      <router-outlet></router-outlet>
+  </div>

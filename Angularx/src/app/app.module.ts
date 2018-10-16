@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { StickiesComponent } from './components/stickies/stickies.component';
@@ -15,7 +16,30 @@ import { GituserComponent } from './components/gituser/gituser.component';
 import { GitreposComponent } from './components/gitrepos/gitrepos.component';
 import { PowerofPipe } from './pipes/powerof.pipe';
 import { MypipeComponent } from './components/mypipe/mypipe.component';
+import { NewsComponent } from './components/news/news.component';
+import { MarketComponent } from './components/market/market.component';
+import { ToolsComponent } from './components/tools/tools.component';
 
+//Routing example
+const routes: Routes = [
+  {
+    path: 'news',
+    component: NewsComponent
+  },
+  {
+    path: 'market',
+    component: MarketComponent
+  },
+  {
+    path: 'tools',
+    component: ToolsComponent
+  },
+  {
+    path: 'wykats',
+    component: GituserComponent 
+  }
+
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,10 +54,15 @@ import { MypipeComponent } from './components/mypipe/mypipe.component';
     GituserComponent,
     GitreposComponent,
     PowerofPipe,
-    MypipeComponent
+    MypipeComponent,
+    NewsComponent,
+    MarketComponent,
+    ToolsComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule
+    BrowserModule,HttpClientModule,
+    //for root routing
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
