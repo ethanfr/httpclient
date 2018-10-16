@@ -24,6 +24,9 @@ import { AppRoutingModule } from './app-routing-module';
 import { ProductComponent } from './components/product/product.component';
 import { UserformComponent } from './components/userform/userform.component';
 import { FormComponent } from './components/form/form.component';
+import { ContainerComponent } from './components/container/container.component';
+import { CategorySenderComponent } from './components/category-sender/category-sender.component';
+import { ProductReceiverComponent } from './components/product-receiver/product-receiver.component';
 
 
 @NgModule({
@@ -46,7 +49,10 @@ import { FormComponent } from './components/form/form.component';
     ToolsComponent,
     ProductComponent,
     UserformComponent,
-    FormComponent 
+    FormComponent,
+    ContainerComponent,
+    CategorySenderComponent,
+    ProductReceiverComponent 
   ],
   //modules should be imported here
   imports: [
