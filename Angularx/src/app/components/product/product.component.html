@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+  <thead>
+<tr>
+<td>Id</td>
+<td>ProductCode</td>
+<td>Descrpition</td>
+<td>Price</td>
+<td></td>
+</tr>
+</thead>
+<tbody *ngIf='arrFetch'>
+    <tr *ngFor='let x of arrFetch; let i=index'>
+      <td>{{x.id}}</td>
+      <td>{{x.name}}</td>
+      <td>{{x.description}}</td>
+      <td>{{x.price}}</td>
+      <td><span><button (click)='editData(x)' >Edit</button></span>
+      <span><button (click)='deleteData(i)' >Delete</button></span></td>
+    </tr>
+
+
+    
+  </tbody>
+  
+</table>
+<button (click)="showForm()" >+</button>
+<app-userform *ngIf='showForms' [objProduct]='myProduct'  (notify)='onNotify($event)'></app-userform>

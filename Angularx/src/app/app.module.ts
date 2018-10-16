@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { StickiesComponent } from './components/stickies/stickies.component';
@@ -19,27 +20,12 @@ import { MypipeComponent } from './components/mypipe/mypipe.component';
 import { NewsComponent } from './components/news/news.component';
 import { MarketComponent } from './components/market/market.component';
 import { ToolsComponent } from './components/tools/tools.component';
+import { AppRoutingModule } from './app-routing-module';
+import { ProductComponent } from './components/product/product.component';
+import { UserformComponent } from './components/userform/userform.component';
+import { FormComponent } from './components/form/form.component';
 
-//Routing example
-const routes: Routes = [
-  {
-    path: 'news',
-    component: NewsComponent
-  },
-  {
-    path: 'market',
-    component: MarketComponent
-  },
-  {
-    path: 'tools',
-    component: ToolsComponent
-  },
-  {
-    path: 'wykats',
-    component: GituserComponent 
-  }
 
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,12 +43,16 @@ const routes: Routes = [
     MypipeComponent,
     NewsComponent,
     MarketComponent,
-    ToolsComponent
+    ToolsComponent,
+    ProductComponent,
+    UserformComponent,
+    FormComponent 
   ],
+  //modules should be imported here
   imports: [
-    BrowserModule,HttpClientModule,
+    BrowserModule,HttpClientModule,AppRoutingModule,FormsModule
     //for root routing
-    RouterModule.forRoot(routes)
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
